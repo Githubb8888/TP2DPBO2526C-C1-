@@ -43,4 +43,4 @@ PHP can be run by going into the PHP folder and running php -S localhost:8000 an
 
 Documentation
 
-Screenshots of each language's output are inside the Dokumentasi folder. C++ output is cpp_output.png, Python output is python_output.png, Java output is java_output.png, and PHP output is php_output.png, and the diagram image is diagram_inheritance.png.
+Screenshots of each language's output are inside the Dokumentasi folder. C++ output is cpp.png, Python output is python.png & python2.png, Java output is java.png & java2.png, and PHP output is php.output.png, and the diagram image is diagram_inheritance.png.
