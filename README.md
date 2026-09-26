@@ -4,38 +4,43 @@ Janji
 Saya Bozorov Husein dengan NIM 2521812 mengerjakan evaluasi Tugas Praktikum 2 dalam mata kuliah Desain dan Pemrograman Berorientasi Objek untuk keberkahan-Nya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.
 
 Design Diagram
-Below is the representation of the relationships between classes using the Multilevel Inheritance concept:
+
+The diagram image is at Dokumentasi/diagram_inheritance.png
+
+Benua is the base class and holds nama_benua, luas_benua, and zona_waktu_utama. Negara extends Benua and adds nama_negara, bahasa_resmi, and mata_uang. Kota extends Negara and adds nama_kota, jumlah_penduduk, ikon_kota, and foto_produk, where foto_produk exists only in the PHP version. So the chain is Benua at the top, Negara in the middle, and Kota at the bottom, each one extending the class above it.
 
 Attribute and Method Explanation
-Benua Class:
-nama_benua: Stores the continent name.
-luas_benua: Total area of the continent in square kilometers.
-zona_waktu_utama: Primary timezone of the region.
-Constructor Method: Initializes the base attributes.
 
-Negara Class:
-nama_negara: The name of the country.
-bahasa_resmi: Official language spoken.
-mata_uang: Currency used in the country.
-Constructor Method: Initializes the derived attributes plus the attributes from the Benua class.
+Benua class holds nama_benua, the name of the continent, luas_benua, the total area of the continent in square kilometers, and zona_waktu_utama, the primary timezone of the region. Its constructor initializes these three base attributes.
 
-Kota Class:
-nama_kota: The name of the city.
-jumlah_penduduk: Total population count.
-ikon_kota: Landmark or symbol of the city.
-foto_produk: Exclusive to PHP, stores the filename of the city picture.
-printRow() / getRowHTML() Method: Prints all attributes from the three classes into a single dynamic table format.
+Negara class extends Benua and adds nama_negara, the name of the country, bahasa_resmi, the official language spoken, and mata_uang, the currency used. Its constructor initializes these attributes and calls the parent constructor to set up the Benua attributes as well.
+
+Kota class extends Negara and adds nama_kota, the name of the city, jumlah_penduduk, the total population, ikon_kota, the landmark or symbol of the city, and foto_produk, which only exists in the PHP version and stores the filename of the city photo. Kota also has printRow in C++ and Java, print_row in Python, and getRowHTML in PHP, and all of them print or return every attribute from Benua, Negara, and Kota together in a single row of the table.
 
 Program Flow
-1. When the program is executed, it automatically initializes 5 default objects of the Kota class (hardcoded) for Asia (Russia/Moscow), Europe (UK/London), North America (Canada/Toronto), South America (Brazil/RioDeJaneiro), and Australia (Australia/Sydney).
-2. (For C++, Java, and Python only): The program asks for an integer input n from the user, indicating how many additional data entries to insert.
-3. The program loops n times to receive the attribute inputs sequentially. Each new data entry is instantiated as a Kota object.
-4. Once all inputs are completed, the program prints the table header.
-5. The program iterates over the list of objects and calls the row printer method to display all attributes comprehensively in a single dynamic table.
+
+When the program runs, it automatically creates five default Kota objects that are hardcoded: Asia and Moscow in Russia, Europe and London in the UK, North America and Toronto in Canada, South America and Rio de Janeiro in Brazil, and Australia and Sydney in Australia.
+
+For C++, Java, and Python only, the program then asks the user for an integer n, which is how many extra entries they want to add.
+
+The program loops n times and reads the attributes for each new entry in order, and each new entry becomes a new Kota object added to the list.
+
+Once all the input is done, the program prints the table header.
+
+The program then goes through every object in the list and calls the row printing method so all the attributes from every object are shown together in one dynamic table.
+
+PHP does not take any user input, since it is hardcoded as allowed by the assignment, and instead displays the table as a web page that also shows each city's photo through foto_produk.
+
+How to Run
+
+C++ can be run by going into the CPP folder and running g++ main.cpp -o main followed by ./main and feeding it testcase.txt as input.
+
+Python can be run by going into the Python folder and running python3 main.py and feeding it testcase.txt as input.
+
+Java can be run by going into the Java folder and running javac Main.java then java Main and feeding it testcase.txt as input.
+
+PHP can be run by going into the PHP folder and running php -S localhost:8000 and then opening index.php in the browser.
 
 Documentation
-(Add the execution result screenshots for each programming language below)
-C++ Output: Dokumentasi/cpp_output.png
-Python Output: Dokumentasi/python_output.png
-Java Output: Dokumentasi/java_output.png
-PHP Output: Dokumentasi/php_output.png
+
+Screenshots of each language's output are inside the Dokumentasi folder. C++ output is cpp_output.png, Python output is python_output.png, Java output is java_output.png, and PHP output is php_output.png, and the diagram image is diagram_inheritance.png.
