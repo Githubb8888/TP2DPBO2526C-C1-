@@ -6,26 +6,6 @@ Saya Bozorov Husein dengan NIM 2521812 mengerjakan evaluasi Tugas Praktikum 2 da
 Design Diagram
 Below is the representation of the relationships between classes using the Multilevel Inheritance concept:
 
-Benua (Base Class)
-  nama_benua : String
-  luas_benua : Long
-  zona_waktu_utama : String
-
-inherited by ->>>>>>>>>>
-
-Negara (Intermediate Class)
-  nama_negara : String
-  bahasa_resmi : String
-  mata_uang : String
-
-inherited by ->>>>>>>>>>
-
-Kota (Derived Class)
-  nama_kota : String
-  jumlah_penduduk : Long
-  ikon_kota : String
-  foto_produk : String (Specifically for PHP implementation)
-
 Attribute and Method Explanation
 Benua Class:
 nama_benua: Stores the continent name.
