@@ -5,7 +5,7 @@ Saya Bozorov Husein dengan NIM 2521812 mengerjakan evaluasi Tugas Praktikum 2 da
 
 Design Diagram
 
-The diagram image is at Dokumentasi/diagram_inheritance.png
+The diagram image is at TP2DPBO2526C1/Dokumentasi/diagram_inheritance.png
 
 Benua is the base class and holds nama_benua, luas_benua, and zona_waktu_utama. Negara extends Benua and adds nama_negara, bahasa_resmi, and mata_uang. Kota extends Negara and adds nama_kota, jumlah_penduduk, ikon_kota, and foto_produk, where foto_produk exists only in the PHP version. So the chain is Benua at the top, Negara in the middle, and Kota at the bottom, each one extending the class above it.
 
